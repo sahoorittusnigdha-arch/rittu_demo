@@ -1,0 +1,65 @@
+'''
+#CONSECUTIVE CHARACTER COUNTER
+input_str ="aaabbbbcc"
+max_count = 0
+max_char = ""
+current_count = 1
+previous_char = ""
+for char in input_string:
+    if char == previous_char:
+        current_count += 1
+    else:
+        current_count = 1
+    if current_count>max_count:
+        max_count = current_count
+        max_char = char
+if input_string:
+    print(f"character:{max_char}")
+    print(f"count:{max_count}")
+else:
+    print("the string is empty:")
+'''
+'''
+#character frequency
+user_string = input("enter a string:")
+target_char = input("enter a character to count:")
+count = 0
+for char in user_string:
+    if char == target_char:
+        count += 1
+    print(count)
+    
+    '''
+'''
+#palindrome checker
+user_string=input("enter a string:")
+reversed_string=user_string[::-1]
+if user_string==reversed_string:
+    print("pallindrome")
+else:
+    print("not pallindrome")
+    '''
+'''
+#password
+password = input("enter a password:")
+has_digit = False
+has_uppercase= False
+for char in password:
+    if char.isdigit():
+        has_digit = True
+    if char.isupper():
+        has_uppercase=True
+    if len(password)>=8 and has_digit and has_uppercase:
+        print("strong password")
+    else:
+        print("weak password")
+        '''
+#reverse string
+text = input("enter  a string:")
+reverse_slice=text[::-1]
+reverse_loop=""
+for i in text:
+    reverse_loop = i + reverse_loop
+    print("reversed string using slicing:",reverse_slice)
+    print("reversed string using loop:",reverse_loop)
+    
